@@ -40,6 +40,4 @@ if __name__ == "__main__":
             document.add_paragraph(capacidade, style="paragrafo")
             document.add_picture("logo.png", width=Inches(6.5))
 
-
-
             document.save(f"{sala}.docx")
