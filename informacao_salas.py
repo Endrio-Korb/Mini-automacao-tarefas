@@ -23,8 +23,8 @@ if __name__ == "__main__":
     with open(os.path.join(os.getcwd(), "Organização das salas.csv"), "r") as arquivo:
         arquivo_csv = csv.reader(arquivo, delimiter = ";")
 
-        for linha in arquivo_csv:
 
+        for linha in arquivo_csv:
             sala = "SALA " + str(linha[1])
             projetor = "PROJETOR " + str(linha[2])
             patrimonio = "PATRIMÔNIO " + str(linha[3])
