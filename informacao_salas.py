@@ -4,18 +4,14 @@ import csv
 
 from docx import Document
 from docx.enum.style import WD_STYLE_TYPE
-from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Pt
-from docx.shared import RGBColor
 from docx.shared import Inches
-
-
 
 
 if __name__ == "__main__":
 
-    document = Document()   
+    document = Document()
 
     # Estilos da informações
     styles = document.styles
@@ -34,10 +30,15 @@ if __name__ == "__main__":
             patrimonio = "PATRIMÔNIO " + str(linha[3])
             capacidade = "CAPACIDADE " +str(linha[4])
 
-            document.add_paragraph(sala, style="paragrafo")
-            document.add_paragraph(projetor,style="paragrafo")
-            document.add_paragraph(patrimonio, style="paragrafo")
-            document.add_paragraph(capacidade, style="paragrafo")
-            document.add_picture("logo.png", width=Inches(6.5))
+            paragraph = document.add_paragraph(sala, style="paragrafo")
+            paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+            paragraph = document.add_paragraph(projetor,style="paragrafo")
+            paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+            paragraph = document.add_paragraph(patrimonio, style="paragrafo")
+            paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+            paragraph = document.add_paragraph(capacidade, style="paragrafo")
+            paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
+            paragraph = document.add_picture("logo.png", width=Inches(6.5))
+            paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
 
             document.save(f"{sala}.docx")
