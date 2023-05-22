@@ -24,7 +24,7 @@ if __name__ == "__main__":
             for paragrafo in documento.paragraphs:
 
                 referencia = {
-                "s" : sala ,
+                "sl" : sala ,
                 "pj" : projetor,
                 "pt" : patrimonio,
                 "cp" : capacidade,
@@ -35,15 +35,3 @@ if __name__ == "__main__":
                         paragrafo.text = paragrafo.text.replace(codigo, valor)
 
                 documento.save(f"Sala - {sala}.docx")
-
-
-        
-
-                    # if "x" in paragrafo.text:
-                    #     paragrafo.text = paragrafo.text.replace("x", sala)
-                    # elif "xx" in paragrafo.text:
-                    #     paragrafo.text = paragrafo.text.replace("xx", projetor)
-                    # elif "xxx" in paragrafo.text:
-                    #     paragrafo.text = paragrafo.text.replace("xxx", patrimonio)
-                    # elif "xxxx" in paragrafo.text:
-                    #     paragrafo.text = paragrafo.text.replace("xxxx", capacidade)
