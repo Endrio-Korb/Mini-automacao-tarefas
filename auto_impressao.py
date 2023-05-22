@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     win32print.SetDefaultPrinter(impressora[2])
 
-    caminho = r"caminho da pasta"
+    caminho = r"C:\Users\USER\Documents\salas"
 
     lista_arquivos = os.listdir(caminho)
 
