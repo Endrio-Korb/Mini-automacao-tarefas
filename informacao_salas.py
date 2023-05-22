@@ -22,7 +22,6 @@ if __name__ == "__main__":
 
             for paragrafo in documento.paragraphs:
 
-        
                 referencia = {
                 "XXXX" : sala ,
                 "XXXXXXXXX" : projetor,
