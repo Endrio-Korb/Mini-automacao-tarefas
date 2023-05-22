@@ -34,5 +34,6 @@ if __name__ == "__main__":
                     for codigo in referencia:
                         valor = referencia[codigo]
                         paragrafo.text = paragrafo.text.replace(codigo, valor)
+                        imagem
 
                     documento.save(f"Sala - {sala}.docx")
